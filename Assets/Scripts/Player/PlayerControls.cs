@@ -1,24 +1,10 @@
 using Prime31;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.U2D;
 
 public class PlayerControls : MonoBehaviour
 {
     enum PlayerDirection { Right, Left }
     private PlayerDirection direction = PlayerDirection.Right;
-
-    [Header("Movement")]
-    public float defaultGravity = -25;
-    public float gravity = -25;
-    public float runSpeed = 8;
-    public float groundDamping = 20; // how fast do we change direction? higher means faster
-    public float inAirDamping = 5;
-    public float jumpHeight = 3;
-    public float maxFallSpeed = -9;
-    private float normalizedHorizontalSpeed = 0;
-    public float fallSpeedModifier = 1;
-    public float gravityFallModifier = 1;
 
     [Header("Jump")]
     public float coyoteTime = 0.15f;
@@ -41,20 +27,17 @@ public class PlayerControls : MonoBehaviour
     private bool lockInput = false;
 
     private CharacterController2D controller;
-    // private Animator animator;
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
 
     private Vector3 velocity;
-
+    private float normalizedHorizontalSpeed = 0;
     private bool wasGroundedLastFrame = false;
 
     void Awake()
     {
-        // animator = GetComponent<Animator>();
         controller = GetComponent<CharacterController2D>();
 
-        // listen to some events for illustration purposes
         controller.onControllerCollidedEvent += OnControllerCollider;
         controller.onTriggerEnterEvent += OnTriggerEnterEvent;
         controller.onTriggerExitEvent += OnTriggerExitEvent;
@@ -62,16 +45,16 @@ public class PlayerControls : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         audioSource = GetComponentInChildren<AudioSource>();
+
+        PlayerStats.Instance.ResetHealth(); // Ensure health is at max at the start
     }
 
     #region Event Listeners
 
     void OnControllerCollider(RaycastHit2D hit)
     {
-        // bail out on plain old ground hits cause they aren't very interesting
         if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Walls"))
         {
-            // If the normal of the hit is horizontal, zero out the x velocity
             if (Mathf.Abs(hit.normal.x) > 0)
             {
                 velocity.x = 0;
@@ -101,9 +84,6 @@ public class PlayerControls : MonoBehaviour
         {
             jumpReleased = true;
         }
-
-        // animator.SetFloat("xVelocity", Mathf.Abs(velocity.x));
-        // animator.SetFloat("yVelocity", velocity.y);
     }
 
     void FixedUpdate()
@@ -112,16 +92,14 @@ public class PlayerControls : MonoBehaviour
         {
             velocity.y = 0;
             coyoteTimeCounter = coyoteTime;
-            // animator.SetBool("isJumping", false);
         }
         else
         {
             coyoteTimeCounter -= Time.fixedDeltaTime;
-            // animator.SetBool("isJumping", true);
         }
 
         if (velocity.y < 0)
-            velocity.y *= fallSpeedModifier;
+            velocity.y *= PlayerStats.Instance.fallSpeedModifier;
 
         HandleHorizontal();
         HandleJump();
@@ -129,7 +107,6 @@ public class PlayerControls : MonoBehaviour
 
         controller.move(velocity * Time.deltaTime);
 
-        // grab our current velocity to use as a base for all calculations
         velocity = controller.velocity;
         jumpPressed = false;
         jumpReleased = false;
@@ -146,7 +123,6 @@ public class PlayerControls : MonoBehaviour
             direction = input > 0 ? PlayerDirection.Right : PlayerDirection.Left;
             normalizedHorizontalSpeed = Mathf.Sign(input);
 
-            // Adjust sprite facing based on direction
             if ((direction == PlayerDirection.Right && transform.localScale.x < 0) ||
                 (direction == PlayerDirection.Left && transform.localScale.x > 0))
             {
@@ -157,23 +133,10 @@ public class PlayerControls : MonoBehaviour
         {
             normalizedHorizontalSpeed = 0;
             velocity.x = 0;
-
-            /*
-            if (controller.isGrounded)
-            {
-                SetAnimationState("Idle");
-                PlayAnimation("Idle");
-            }
-            else if (velocity.y < 0)
-            {
-                SetAnimationState("Falling");
-                PlayAnimation("Fall");
-            }
-            */
         }
 
-        var smoothedMovementFactor = controller.isGrounded ? groundDamping : inAirDamping;
-        velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * runSpeed, Time.deltaTime * smoothedMovementFactor);
+        var smoothedMovementFactor = controller.isGrounded ? PlayerStats.Instance.groundDamping : PlayerStats.Instance.inAirDamping;
+        velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * PlayerStats.Instance.runSpeed, Time.deltaTime * smoothedMovementFactor);
     }
 
     void HandleJump()
@@ -184,9 +147,9 @@ public class PlayerControls : MonoBehaviour
         }
 
         if (velocity.y < 0)
-            velocity.y += gravity * gravityFallModifier * Time.deltaTime;
+            velocity.y += PlayerStats.Instance.gravity * PlayerStats.Instance.gravityFallModifier * Time.deltaTime;
         else
-            velocity.y += gravity * Time.deltaTime;
+            velocity.y += PlayerStats.Instance.gravity * Time.deltaTime;
 
         if (jumpReleased && velocity.y > 0)
         {
@@ -209,29 +172,15 @@ public class PlayerControls : MonoBehaviour
         {
             jumpPressed = true;
         }
-        velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
+        velocity.y = Mathf.Sqrt(2f * PlayerStats.Instance.jumpHeight * -PlayerStats.Instance.gravity);
         coyoteTimeCounter = 0;
-
-        // animator.SetBool("isJumping", true);
     }
 
     private void ClampFallSpeed()
     {
-        if (rb.velocity.y < maxFallSpeed)
+        if (rb.velocity.y < PlayerStats.Instance.maxFallSpeed)
         {
-            rb.velocity = new Vector2(rb.velocity.x, maxFallSpeed);
+            rb.velocity = new Vector2(rb.velocity.x, PlayerStats.Instance.maxFallSpeed);
         }
     }
-
-    /*
-    public void SetAnimationState(string state)
-    {
-        animator.SetInteger("state", Animator.StringToHash(state));
-    }
-
-    public void PlayAnimation(string name)
-    {
-        animator.Play(Animator.StringToHash(name));
-    }
-    */
 }
