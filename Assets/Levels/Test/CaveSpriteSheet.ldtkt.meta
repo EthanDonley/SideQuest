@@ -1,0 +1,365 @@
+fileFormatVersion: 2
+guid: a291d814e2125324489664e58d207f2a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: f3268c876daf4890b6af6cd462063137, type: 3}
+  _reimportOnDependencyChange: 1
+  _pixelsPerUnit: 16
+  _sprites:
+  - name: CaveSpriteSheet_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 64
+      width: 16
+      height: 16
+    spriteID: f11d8d6277be9b146aaf4b2022cf247b
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 24ed372470307794aa7042896081c703
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 64
+      width: 16
+      height: 16
+    spriteID: 8a633af5f65eae540b242a51eabce549
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 64
+      width: 16
+      height: 16
+    spriteID: e368c2a446b3b514ca4680b4c5ae6744
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 64
+      width: 16
+      height: 16
+    spriteID: ce7307a3c4b0849428371435a62d54a3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 48
+      width: 16
+      height: 16
+    spriteID: b40e1e6c98cc1184eab966c367a1f6c4
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 165b977e7cd6ba043bbe5aff242f02b0
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_7
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 4309c1ef845f2484ca2c56ef1f9d7d93
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_8
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 6c627914540dc6a43bf669cb6ac20269
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_9
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 48
+      width: 16
+      height: 16
+    spriteID: 7778606de50e85d429982103dd602989
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_10
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 99e4a5411e0fe5c4ca22bc090b06a51e
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_11
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 32
+      width: 16
+      height: 16
+    spriteID: 695730ebb8a18d7459a6a666abe8db0c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_12
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 32
+      width: 16
+      height: 16
+    spriteID: b096918d20aa452459d727aec318417d
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_13
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 32
+      width: 16
+      height: 16
+    spriteID: c0c595b1690eff64f8465e62055debde
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_14
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 32
+      width: 16
+      height: 16
+    spriteID: b8bb1f7d40bccbc4784d397caa693660
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_15
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 09bb7217432af1a4fb187bed876253a3
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_16
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 2079a4dcd25e17042ac285cb4a001d60
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_17
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 16cedadddd1365844b9e913f77a96782
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_18
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 4b78e1af35a10da41a09c5b46b372d54
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_19
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 16
+      width: 16
+      height: 16
+    spriteID: 32e2f561c203d18439f427852dbf3496
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_20
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 228f8fe48300340409c2cb36418d7a74
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_21
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 16
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 843808cf8ba184842a4f3e3ae48359bc
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_22
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 32
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 3102671fe7d418b4aab92ee889d5312f
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_23
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 48
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 24d0ea8920db9cb44a2ee42f371e8e4c
+    spriteOutline: []
+    tessellationDetail: 0
+  - name: CaveSpriteSheet_24
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 64
+      y: 0
+      width: 16
+      height: 16
+    spriteID: 8391e2c4dd7032749962a4abc5c6c3f6
+    spriteOutline: []
+    tessellationDetail: 0
+  _secondaryTextures: []
+  _artifacts: {instanceID: 0}

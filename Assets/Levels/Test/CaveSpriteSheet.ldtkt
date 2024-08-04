@@ -1,0 +1,33 @@
+{
+  "Rects": null,
+  "Def": {
+    "__cHei": 5,
+    "__cWid": 5,
+    "cachedPixelData": {
+      "opaqueTiles": "1111111111111111111111111",
+      "averageColors": "f445f445f323f223f323f445f445f222f000f222f334f334f112f000f112f435f446f335f886f886f446f445f445fbb8fbb8"
+    },
+    "customData": [
+
+    ],
+    "embedAtlas": null,
+    "enumTags": [
+
+    ],
+    "identifier": "CaveSpriteSheet",
+    "padding": 0,
+    "pxHei": 80,
+    "pxWid": 80,
+    "relPath": "CaveSpriteSheet(#1).png",
+    "savedSelections": [
+
+    ],
+    "spacing": 0,
+    "tags": [
+
+    ],
+    "tagsSourceEnumUid": null,
+    "tileGridSize": 16,
+    "uid": 2
+  }
+}
